@@ -81,7 +81,9 @@
 						<li class="fragment" data-fragment-index="0">конкретность желаемого (многие детали и частности);</li>
 						<li class="fragment" data-fragment-index="0">слабая выраженность конкретных путей к реализации;</li>
 						<li class="fragment highlight-red" data-fragment-index="0">эмоциональная насыщенность образа;</li>
-						<li class="fragment" data-fragment-index="0">соединение мечты с чувством определённой уверенности в её осуществимости;</li>
+						<li class="fragment" data-fragment-index="0">соединение мечты с чувством определённой уверенности в её
+							осуществимости;
+						</li>
 						<li class="fragment" data-fragment-index="0">творческий характер образа;</li>
 						<li class="fragment highlight-red" data-fragment-index="0">позитивное и конструктивное направление;</li>
 					</ul>
@@ -119,7 +121,9 @@
 			</section>
 			<section>
 				<blockquote>
-					<p><b>Koyunbaba</b> (или <b>Seyit Ali</b>) -  согласно турецким религиозным поверьям - имя святого XIII века, «потомки которого по сей день населяют каменистую, полупустынную дикую местность на юго-западе Турции». Такое же название носит и маленькое селение на востоке страны</p>
+					<p><b>Koyunbaba</b> (или <b>Seyit Ali</b>) - согласно турецким религиозным поверьям - имя святого XIII века,
+						«потомки которого по сей день населяют каменистую, полупустынную дикую местность на юго-западе Турции».
+						Такое же название носит и маленькое селение на востоке страны</p>
 				</blockquote>
 			</section>
 			<section data-background-video="media/mountains.mp4">
@@ -152,7 +156,26 @@
 			<section data-background="img/defence/defence-6.png"></section>
 			<section data-background="img/defence/defence-7.png"></section>
 		</section>
-		<section data-background="img/destroy.png"></section>
+		<section data-background="img/destroy.png" data-black-bg></section>
+		<section data-background-video="media/stars.mp4" data-black-bg>
+			<audio data-autoplay src="media/pura.mp3"></audio>
+		</section>
+		<section data-background="#000"></section>
+		<section>
+			<section data-stars data-background="#000" data-star-sound-start></section>
+			<section data-background="#000" data-stars-cleanup>
+				<h1 class="white-color">спасибо</h1>
+			</section>
+			<section data-background="#000">
+				<h2 class="white-color">P.S.</h2>
+			</section>
+			<section data-background="#000">
+				<img src="img/man_house.jpg">
+			</section>
+			<section data-background="#000" data-stars-cleanup>
+				<h1 class="white-color">спасибо</h1>
+			</section>
+		</section>
 
 
 	</div>
@@ -192,23 +215,23 @@
         script_runner: {
             'data-simple-dream': {
                 'slidechanged': function (slide) {
-                        let container = slide.currentSlide.getElementsByClassName('chart')[0];
-                        new Chartist.Line(container, {
-                            labels: ['', '', '', '', '', '', '', '', '', ''],
-                            series: [
-                                [0, 1, 1, 1, 5, 5, 5, 6, 8],
-                            ]
-                        }, {
-                            high: 10,
-                            fullWidth: true,
-                            seriesBarDistance: 35,
-                            showArea: true,
-                            chartPadding: 20,
-                            showPoint: true,
-                            axisY: {
-                                onlyInteger: true
-                            },
-                        });
+                    let container = slide.currentSlide.getElementsByClassName('chart')[0];
+                    new Chartist.Line(container, {
+                        labels: ['', '', '', '', '', '', '', '', '', ''],
+                        series: [
+                            [0, 1, 1, 1, 5, 5, 5, 6, 8],
+                        ]
+                    }, {
+                        high: 10,
+                        fullWidth: true,
+                        seriesBarDistance: 35,
+                        showArea: true,
+                        chartPadding: 20,
+                        showPoint: true,
+                        axisY: {
+                            onlyInteger: true
+                        },
+                    });
                     setTimeout(() => $('.ct-series-a .ct-point', container).last().css('stroke-width', '30px'), 0);
                 }
             },
@@ -251,12 +274,20 @@
                     audioStars.pause();
                 }
             },
+            'data-black-bg': {
+                'slidechanged': function (slide) {
+                    if (slide.currentSlide.hasAttribute('data-black-bg')) {
+                        $('body').css('background-color', 'black');
+                    }
+                }
+            },
         }
     });
 
     const audioStars = new Audio('media/mass_effect.mp3');
 
     function cleanupEffects() {
+        $('body').css('background-color', 'white');
     }
 
     function waitForHLJS() {

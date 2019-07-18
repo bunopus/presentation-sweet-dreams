@@ -1,3 +1,11 @@
+.reveal div.slide-background.present[data-background-hash="img/destroy.pngnullnullnullnullnullnullnullnullnull"] {
+  -webkit-animation: fadeout 7s forwards;
+          animation: fadeout 7s forwards; }
+
+.reveal div.slide-background.present[data-background-hash="0media/stars.mp4nullnullnullnullnullnull"] {
+  -webkit-animation: fadein 10s forwards;
+          animation: fadein 10s forwards; }
+
 .reveal section img {
   border: none;
   background: none;
@@ -96,6 +104,30 @@
     background: rgba(255, 255, 255, 0.2);
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1); } }
+
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes fadeout {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 #stars {
   position: absolute;

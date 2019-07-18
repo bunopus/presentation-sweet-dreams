@@ -3,6 +3,13 @@
   $near-black: rgb(33, 0, 8);
   $red: #b82525;
 
+  div.slide-background.present[data-background-hash="img/destroy.pngnullnullnullnullnullnullnullnullnull"] {
+    animation: fadeout 7s forwards;
+  }
+
+  div.slide-background.present[data-background-hash="0media/stars.mp4nullnullnullnullnullnull"] {
+    animation: fadein 10s forwards;
+  }
 
   section {
     img {
@@ -107,6 +114,24 @@
   100% {
     background: rgba(255,255,255,0.2);
     transform: scale(1, 1);
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
