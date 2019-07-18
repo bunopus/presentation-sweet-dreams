@@ -37,6 +37,15 @@
 .reveal section .accent {
   color: #b82525; }
 
+.reveal section ul.grayed-list .fragment {
+  visibility: visible;
+  opacity: 1; }
+  .reveal section ul.grayed-list .fragment.visible {
+    color: rgba(33, 0, 8, 0.08); }
+  .reveal section ul.grayed-list .fragment.highlight-red.visible.current-fragment {
+    color: #210008;
+    font-size: 35px; }
+
 .star {
   position: absolute;
   width: 5px;

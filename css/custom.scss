@@ -59,7 +59,24 @@
 
     .accent {
       color: $red;
+    }
 
+
+
+    ul.grayed-list {
+      .fragment {
+        visibility: visible;
+        opacity: 1;
+
+        &.visible {
+          color: rgba(33, 0, 8, 0.08);
+        }
+
+        &.highlight-red.visible.current-fragment  {
+          color: $near-black ;
+          font-size: 35px;
+        }
+      }
     }
   }
 }
