@@ -65,11 +65,7 @@
 					собаку было моей мечтой.</i> <i>Стать моряком - м. ребёнка.</i> <i>Красивое платье - м. девушки.</i> <i>Исполнилась
 					м.</i> <i>М. не сбылась.</i> <b>//</b> <i>Разг.</i> О чём-л., являющемся пределом желаемого для кого-л., самым
 					желанным, почти не осуществимым. <i>Не подарок, а м.</i> <i>Голубая м.</i><br><br>
-					<b>3.</b> О том, что нереально, неосуществимо. <i>Пустая м.</i> <i>Возврат любви - это только м.</i><i>Напомнить
-					о мечтах детства.</i><br><br>
-					<b>4.</b> Процесс создания в воображении представлений о чём-л. желаемом, предполагаемом или несуществующем,
-					фантастическом. <i>М. об инопланетянах.</i> <i>Помогать мечте о лучшем.</i><i>Разрушить мечту.</i> <i>Предаваться
-					мечтам.</i>
+					...
 				</blockquote>
 			</section>
 			<section>
@@ -253,11 +249,12 @@
                         } else {
                             clearInterval(interval);
                         }
-                    }, 100)
+                    }, 130)
                 }
             },
             'data-star-sound-start': {
                 'slidechanged': function () {
+                    audioStars = new Audio('media/mass_effect.mp3');
                     audioStars.play();
                 }
             },
@@ -269,7 +266,7 @@
                             return;
                         }
                         audioStars.volume -= 0.1;
-                    }, 2000);
+                    }, 3000);
                 }
             },
             'data-stars-cleanup': {
@@ -288,7 +285,7 @@
         }
     });
 
-    const audioStars = new Audio('media/mass_effect.mp3');
+    let audioStars = new Audio('media/mass_effect.mp3');
 
     function cleanupEffects() {
         $('body').css('background-color', 'white');
